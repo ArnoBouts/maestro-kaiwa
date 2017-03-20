@@ -1,4 +1,5 @@
 FROM node:6
+# FROM_DIGEST sha256:24
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
@@ -17,7 +18,7 @@ ENV LDAP_GROUP mygroup
 ENV LDAP_USER_BASE ou=users,dc=example.com
 ENV LDAP_GROUP_BASE ou=groups,dc=example.com
 
-RUN apt-get install -y git
+RUN apt-get install -y --no-install-recommends --no-install-suggests git
 
 #RUN locale-gen en_US && locale-gen en_US.UTF-8 && echo 'LANG="en_US.UTF-8"' > /etc/default/locale
 
