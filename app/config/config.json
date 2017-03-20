@@ -1,0 +1,20 @@
+{
+    "server": {
+        "port": 8000
+    },
+    "client": {
+        "name": "{{XMPP_NAME}}",
+        "baseUrl": "http://{{HOSTNAME}}",
+        "domain": "{{XMPP_DOMAIN}}",
+        "wss": "{{XMPP_WSS}}",
+        "sasl": "scram-sha-1",
+        "securePasswordStorage": true,
+        "muc": "{{XMPP_MUC}}",
+        "startup": "{{XMPP_STARTUP}}",
+        "admin": "{{XMPP_ADMIN}}",
+        "keepalive": {
+            "interval": 45,
+            "timeout": 15
+        }
+    }
+}

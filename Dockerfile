@@ -24,11 +24,13 @@ RUN apt-get install -y --no-install-recommends --no-install-suggests git
 
 RUN git clone https://github.com/ForNeVeR/kaiwa.git
 
-RUN cd kaiwa && git checkout nots
+RUN cd kaiwa && git checkout develop
 
 RUN cd kaiwa && npm install
 
-RUN cd kaiwa && npm run compile
+RUN cd kaiwa && cp config.example.json config.json
+
+RUN cd kaiwa && npm run deploy
 
 ADD app /app
 
