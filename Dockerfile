@@ -28,6 +28,8 @@ RUN cd kaiwa && git checkout nots
 
 RUN cd kaiwa && npm install
 
+RUN cd kaiwa && npm run compile
+
 ADD app /app
 
 RUN chmod +x /app/start.sh
