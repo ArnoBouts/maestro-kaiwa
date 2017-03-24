@@ -1,6 +1,8 @@
 FROM node:6
 # FROM_DIGEST sha256:24
 
+ENV KAIWA_VERSION c8f8491
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
@@ -23,6 +25,8 @@ RUN apt-get install -y --no-install-recommends --no-install-suggests git
 #RUN locale-gen en_US && locale-gen en_US.UTF-8 && echo 'LANG="en_US.UTF-8"' > /etc/default/locale
 
 RUN git clone https://github.com/ForNeVeR/kaiwa.git
+
+RUN cd kaiwa && git checkout ${KAIWA_VERSION}
 
 RUN cd kaiwa && npm install
 
