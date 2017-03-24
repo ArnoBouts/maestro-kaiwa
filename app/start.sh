@@ -18,7 +18,7 @@ sed 's/{{XMPP_MUC}}/'"${XMPP_MUC}"'/' -i /app/config/config.json
 sed 's/{{XMPP_STARTUP}}/'"${XMPP_STARTUP}"'/' -i /app/config/config.json
 sed 's/{{XMPP_ADMIN}}/'"${XMPP_ADMIN}"'/' -i /app/config/config.json
 
-cp /app/config/config.json /kaiwa
+cp /app/config/dev_config.json /kaiwa
 
 echo "Configuring kaiwa..."
 

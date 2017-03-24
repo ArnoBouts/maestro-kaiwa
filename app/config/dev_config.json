@@ -1,10 +1,14 @@
 {
-    "server": {
+    "isDev": true,
+    "http": {
+        "baseUrl": "http://{{HOSTNAME}}:8000",
         "port": 8000
     },
-    "client": {
+    "session": {
+        "secret": "shhhhhh don't tell anyone ok?"
+    },
+    "server": {
         "name": "{{XMPP_NAME}}",
-        "baseUrl": "http://{{HOSTNAME}}:8000",
         "domain": "{{XMPP_DOMAIN}}",
         "wss": "{{XMPP_WSS}}",
         "sasl": "scram-sha-1",
